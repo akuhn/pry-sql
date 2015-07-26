@@ -1,34 +1,23 @@
 # pry-sql
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pry-sql`. To experiment with that code, run `bin/console` for an interactive prompt.
+Execute SQL commands from the pry command line.
 
-TODO: Delete this and the text above, and describe your gem
+```
+$ pry
+[1] pry(main)> connect example.sqlite
+[2] pry(main)> CREATE TABLE examples (text TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)
+[3] pry(main)> INSERT INTO examples (text) VALUES ("Hello, worlds!")
+[4] pry(main)> SELECT * FROM examples
+=> [["Hello, worlds!", "2015-07-26 08:30:00"]]
+```
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install the gem globally or inside the :development group of your gemfile:
 
-```ruby
-gem 'pry-sql'
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install pry-sql
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+gem install 'pry-sql'
+```
 
 ## Contributing
 
