@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Pry::Sql do
+describe PrySQL do
   it 'has a version number' do
-    expect(Pry::Sql::VERSION).not_to be nil
+    expect(PrySQL::VERSION).not_to be nil
   end
 
   it 'does something useful' do

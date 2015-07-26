@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pry/sql/version'
+require 'pry-sql/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "pry-sql"
-  spec.version       = Pry::Sql::VERSION
+  spec.version       = PrySQL::VERSION
   spec.authors       = ["Adrian Kuhn"]
   spec.email         = ["akuhn@iam.unibe.ch"]
 
