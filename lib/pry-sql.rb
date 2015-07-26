@@ -7,9 +7,8 @@ module PrySQL
   end
 
   def self.connect(cmd, fname)
-    unless fname == ':memory:' || fname.ends_with?('.sqlite') || File.exist?(fname)
-      cmd.output.puts "Error: file '#{fname}' not found."
-      return
+    if fname != ':memory:' && !File.exist?(fname)
+      raise Pry::CommandError, "database file not found: #{fname}"
     end
     require "sqlite3"
     @database = SQLite3::Database.new(fname)
