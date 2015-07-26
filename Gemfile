@@ -7,5 +7,6 @@ group :development do
   gem "bundler", "~> 1.10"
   gem "rake", "~> 10.0"
   gem "rspec"
+  gem "sqlite3"
   gem "pry"
 end
